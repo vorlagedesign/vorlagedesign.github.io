@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Vorlage</title>
+
+<style>
+
+body{
+font-family: Helvetica, Arial, sans-serif;
+margin:0;
+background:#20376D;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgb(235, 188, 172);
+border-bottom:2px solid black;
+position:sticky;
+top:0;
+z-index:2000;
+background:#607AB4;
+}
+
+.logo{
+width:50px;
+height:50px;
+}
+
+.logo img{
+width:100%;
+height:100%;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.nav-button{
+padding:12px 30px;
+font-size:18px;
+border-radius:8px;
+border:2px solid #20376D;
+text-decoration:none;
+color:black;
+background:#FFC5C5;
+transition:0.3s;
+}
+
+.nav-button:hover{
+background:#EEF1F6;
+color:black;
+}
+
+nav a{
+text-decoration:none;
+color:black;
+}
+
+.dropdown{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:black;
+top:45px;
+left:0;
+min-width:140px;
+border-radius:6px;
+overflow:hidden;
+}
+
+.dropdown-content a{
+display:block;
+color:white;
+padding:10px;
+text-decoration:none;
+}
+
+.dropdown-content a:hover{
+background:#333;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* BANNER */
+
+.banner{
+width:80%;
+height:140px;
+background:black;
+color:white;
+margin:40px auto;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+}
+
+.banner img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* PLANES */
+
+.plans{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:40px;
+}
+
+.plan{
+width:220px;
+padding:20px;
+border:2px solid black;
+border-radius:15px;
+text-align:center;
+background:#EEF1F6;
+}
+
+/* PLAN SELECCIONADO */
+
+.plan.selected{
+border:3px solid #20376D;
+background:#FFC5C5;
+}
+
+.price{
+font-size:22px;
+margin:10px 0;
+}
+
+.plan button{
+padding:8px 20px;
+border-radius:20px;
+border:2px solid #20376D;
+background:white;
+cursor:pointer;
+}
+
+.plan button:hover{
+background:black;
+color:#EEF1F6;
+}
+
+.plan p{
+font-size:13px;
+line-height:1.4;
+}
+
+/* REGISTRO */
+
+.register{
+width:400px;
+margin:60px auto;
+border:2px solid #20376D;
+padding:25px;
+border-radius:15px;
+background:#EEF1F6;
+}
+
+.register h2{
+text-align:center;
+}
+
+.register input{
+width:100%;
+padding:8px;
+margin:8px 0;
+border:1px solid #20376D;
+}
+
+.register button{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:2px solid #20376D;
+background:white;
+cursor:pointer;
+}
+
+.register button:hover{
+background:black;
+color:white;
+}
+  footer {
+            background-color: #607AB4;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            border-top: 2px solid black;
+            margin-top: 50px;
+        }
+
+        .footer-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 8px; /* Opcional: para redondear un poco los .jpg */
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.15);
+        }
+
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="Recurso 36_PNG.png">
+</div>
+
+<nav class="menu">
+
+<a class="nav-button" href="Inicio.html">Inicio</a>
+
+<a class="nav-button" href="Proyecto.html">Proyecto</a>
+
+<div class="dropdown">
+
+<a class="nav-button" href="coleccion.html">Colección</a>
+
+<div class="dropdown-content">
+
+<a href="coleccion.html#photoshop">Photoshop</a>
+<a href="coleccion.html#illustrator">Illustrator</a>
+<a href="coleccion.html#indesign">InDesign</a>
+
+</div>
+
+</div>
+
+<a class="nav-button" href="cuenta.html">Cuenta</a>
+
+</nav>
+
+</header>
+
+
+<div class="banner">
+<img src="banner_cuenta.png">
+</div>
+
+
+<section class="plans">
+
+<div class="plan">
+
+<h2>Esencial</h2>
+<p><i>Acceso básico</i></p>
+
+<div class="price">$49 mxn / mes</div>
+
+<button onclick="selectPlan(this)">Elegir</button>
+
+<p>
+Acceso a una selección de plantillas básicas. Ideal para estudiantes que quieren
+empezar a ahorrar tiempo en sus proyectos.
+</p>
+
+</div>
+
+<div class="plan">
+
+<h2>Premium</h2>
+<p><i>Más herramientas creativas</i></p>
+
+<div class="price">$99 mxn / mes</div>
+
+<button onclick="selectPlan(this)">Elegir</button>
+
+<p>
+Acceso completo a todas las plantillas disponibles en la
+plataforma, actualizaciones y recursos adicionales
+para tus proyectos.
+</p>
+
+</div>
+
+<div class="plan">
+
+<h2>Pro</h2>
+<p><i>Experiencia completa</i></p>
+
+<div class="price">$149 mxn / mes</div>
+
+<button onclick="selectPlan(this)">Elegir</button>
+
+<p>
+Acceso total a todas las plantillas, recursos exclusivos,
+nuevos diseños antes que nadie para aprovechar
+al máximo cada herramienta.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="register">
+
+<h2>Crear cuenta</h2>
+
+<form>
+
+<label>Nombre</label>
+<input type="text" placeholder="Tu nombre">
+
+<label>Email</label>
+<input type="email" placeholder="correo@email.com">
+
+<label>Contraseña</label>
+<input type="password" placeholder="Contraseña">
+
+<label>Confirmar contraseña</label>
+<input type="password" placeholder="Confirmar contraseña">
+
+<button type="submit">Registrarse</button>
+
+</form>
+
+</section>
+
+
+<script>
+
+function selectPlan(button){
+
+let plans = document.querySelectorAll(".plan");
+
+plans.forEach(function(plan){
+plan.classList.remove("selected");
+});
+
+button.parentElement.classList.add("selected");
+
+}
+
+</script>
+<footer>
+        <div class="footer-content">
+            <p>¡Te invitamos a visitar nuestras redes sociales!</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/vorlagedesign?igsh=cmZmcmJmdGxpMnhp" target="_blank">
+                    <img src="i.png" alt="Instagram">
+                </a>
+                <a href="https://dribbble.com" target="_blank">
+                    <img src="b.png" alt="Dribbble">
+                </a>
+                <a href="https://www.pinterest.com" target="_blank">
+                    <img src="p.png" alt="Pinterest">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Vorlage</title>
+
+<style>
+
+body{
+font-family:Helvetica, Arial;
+margin:0;
+background:#FFC5C5;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgb(235, 188, 172);
+border-bottom:2px solid #20376D;
+position:sticky;
+top:0;
+z-index:2000;
+background:#607AB4;
+}
+
+.logo{
+width:50px;
+height:50px;
+}
+
+.logo img{
+width:100%;
+height:100%;
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.nav-button{
+
+padding:12px 30px;
+font-size:18px;
+border-radius:8px;
+border:2px solid #20376D;
+
+text-decoration:none;
+color:#20376D;
+background:#FFC5C5;
+
+transition:0.3s;
+}
+
+.nav-button:hover{
+
+background:#EFF2F7;
+color:black;
+
+}
+
+nav a{
+text-decoration:none;
+color:#20376D;
+}
+
+.dropdown{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.dropdown-content{
+
+display:none;
+position:absolute;
+background:#607AB4;
+top:45px;
+left:0;
+min-width:140px;
+border-radius:6px;
+overflow:hidden;
+}
+
+.dropdown-content a{
+
+display:block;
+color:white;
+padding:10px;
+text-decoration:none;
+}
+
+.dropdown-content a:hover{
+background:#20376D;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* GRID */
+
+.container{
+padding:40px;
+}
+
+.section{
+padding:50px;
+}
+
+.section h2{
+font-size:45px;
+margin-bottom:40px;
+color: #20376D;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.card{
+text-align:center;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border:2px solid #20376D;
+border-radius:15px;
+}
+
+.download{
+margin-top:15px;
+padding:10px 25px;
+border-radius:25px;
+border:2px solid #20376D;
+background:white;
+cursor:pointer;
+}
+
+.download:hover{
+background:black;
+color:white;
+}
+
+  footer {
+            background-color: #607AB4;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            border-top: 2px solid black;
+            margin-top: 50px;
+        }
+
+        .footer-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 8px; /* Opcional: para redondear un poco los .jpg */
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.15);
+        }
+    
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    <img src="Recurso 36_PNG.png">
+</div>
+
+<nav class="menu">
+
+<a class="nav-button" href="Inicio.html">Inicio</a>
+
+<a class="nav-button" href="Proyecto.html">Proyecto</a>
+
+<div class="dropdown">
+
+<a class="nav-button" href="coleccion.html">Colección</a>
+
+<div class="dropdown-content">
+
+<a href="coleccion.html#photoshop">Photoshop</a>
+
+<a href="coleccion.html#illustrator">Illustrator</a>
+
+<a href="coleccion.html#indesign">InDesign</a>
+
+</div>
+
+</div>
+
+<a class="nav-button" href="cuenta.html">Cuenta</a>
+
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<section class="section" id="photoshop">
+
+<h2>Photoshop</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="vorlage_ps_post 3-4.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_ps_post 4-5.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_ps_stories 9-16.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+
+</div>
+<div class="card">
+<img src="vorlage_ps_poster.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="illustrator">
+
+<h2>Illustrator</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="vorlage_ai_branding guide.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_ai_post 1-1.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_ai_graficos varios.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_ai_portafolio.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="indesign">
+
+<h2>InDesign</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="vorlage_id_buisness card.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_id_flyer.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+
+<div class="card">
+<img src="vorlage_id_presentacion-16.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+<div class="card">
+<img src="vorlage_id_triptico.png">
+<br>
+<a href="Fonts.rar" download>
+<button class="download">Descargar</button>
+</a>
+</div>
+</div>
+
+</section>
+
+</div>
+<footer>
+        <div class="footer-content">
+            <p>¡Te invitamos a visitar nuestras redes sociales!</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/vorlagedesign?igsh=cmZmcmJmdGxpMnhp" target="_blank">
+                    <img src="i.png" alt="Instagram">
+                </a>
+                <a href="https://dribbble.com" target="_blank">
+                    <img src="b.png" alt="Dribbble">
+                </a>
+                <a href="https://www.pinterest.com" target="_blank">
+                    <img src="p.png" alt="Pinterest">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
