@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -20,7 +20,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 40px;
-border-bottom:2px solid #2;
+border-bottom:2px solid #20376D;
 position:sticky;
 top:0;
 z-index:2000;
@@ -56,7 +56,6 @@ transition:0.3s;
 
 .nav-button:hover{
 background:#EFF2F7;
-color:#20376D;
 }
 
 nav a{
@@ -96,6 +95,14 @@ background:#EFF2F7;
 display:block;
 }
 
+/* BANNER */
+
+.banner img{
+width:100%;
+height:auto;
+display:block;
+}
+
 /* HERO */
 
 .hero{
@@ -111,32 +118,32 @@ background:#EFF2F7;
 width:45%;
 }
 
-/* TITULO */
-
 .hero h1{
 font-size:90px;
 margin:0;
 color:#20376D;
 }
 
-/* TEXTO DEBAJO DEL TITULO */
-
 .hero-text p{
 color:#20376D;
 }
 
-.hero-media{
-width:45%;
+/* AUTORES */
+
+.info-autores{
+background:#20376D;
+text-align:center;
+padding:20px;
+border-bottom:2px solid #EFF2F7;
 }
 
-.hero-media iframe{
-width:100%;
-height:300px;
-border:2px solid #20376D;
-border-radius:10px;
+.info-autores p{
+font-size:22px;
+color:#EFF2F7;
+margin:0;
 }
 
-/* CARRUSEL AUTORES */
+/* CARRUSEL */
 
 .carousel-container{
 display:flex;
@@ -224,7 +231,7 @@ margin-top:15px;
 padding:10px 25px;
 border-radius:25px;
 border:2px solid #20376D;
-background-image:white;
+background:white;
 cursor:pointer;
 }
 
@@ -232,6 +239,8 @@ cursor:pointer;
 background:#20376D;
 color:white;
 }
+
+/* LOGIN */
 
 .login-box{
 display:none;
@@ -271,7 +280,7 @@ border:1px solid #20376D;
 margin-top:10px;
 padding:10px;
 border:2px solid #20376D;
-background:#ffc5c5;
+background:#FFC5C5;
 cursor:pointer;
 }
 
@@ -286,54 +295,43 @@ cursor:pointer;
 font-size:18px;
 }
 
-  footer {
-            background-color: #607AB4;
-            padding: 40px 20px;
-            text-align: center;
-            color: white;
-            border-top: 2px solid black;
-            margin-top: 50px;
-        }
+/* FOOTER */
 
-        .footer-content p {
-            margin-bottom: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .social-icons a img {
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 8px; /* Opcional: para redondear un poco los .jpg */
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons a img:hover {
-            transform: scale(1.15);
-        }
-.info-autores{
-background:#20376D;
+footer{
+background-color:#607AB4;
+padding:40px 20px;
 text-align:center;
-padding:20px;
-border-bottom:2px solid #EFF2F7;
+color:white;
+border-top:2px solid black;
+margin-top:50px;
 }
 
-.info-autores p{
-font-size:22px;
-color:#EFF2F7;
-margin:0;
-font-weight:bold-italic;
+.footer-content p{
+margin-bottom:20px;
+font-size:18px;
+font-weight:bold;
 }
-    </style>
 
-</head>
+.social-icons{
+display:flex;
+justify-content:center;
+gap:25px;
+}
+
+.social-icons a img{
+width:40px;
+height:40px;
+object-fit:cover;
+border-radius:8px;
+transition:transform 0.3s ease;
+}
+
+.social-icons a img:hover{
+transform:scale(1.15);
+}
+
+</style>
+
 <script>
 
 function openLogin(){
@@ -344,12 +342,6 @@ function closeLogin(){
 document.getElementById("loginBox").style.display="none";
 }
 
-</script>
-
-<body>
-
-<script>
-
 function scrollCarousel(value){
 document.getElementById("carousel").scrollBy({
 left:value,
@@ -358,6 +350,10 @@ behavior:"smooth"
 }
 
 </script>
+
+</head>
+
+<body>
 
 <header>
 
@@ -368,7 +364,6 @@ behavior:"smooth"
 <nav class="menu">
 
 <a class="nav-button" href="Inicio.html">Inicio</a>
-
 <a class="nav-button" href="Proyecto.html">Proyecto</a>
 
 <div class="dropdown">
@@ -376,11 +371,9 @@ behavior:"smooth"
 <a class="nav-button" href="coleccion.html">Colección</a>
 
 <div class="dropdown-content">
-
 <a href="coleccion.html#photoshop">Photoshop</a>
 <a href="coleccion.html#illustrator">Illustrator</a>
 <a href="coleccion.html#indesign">InDesign</a>
-
 </div>
 
 </div>
@@ -411,7 +404,10 @@ behavior:"smooth"
 </div>
 
 </div>
-<img src="gif banner.gif" alt="gif diseño" width="1920">
+
+<section class="banner">
+<img src="gif banner.gif" alt="gif diseño">
+</section>
 
 <section class="hero">
 
@@ -427,17 +423,10 @@ ahorrar tiempo y concentrarte en lo más importante: <b>crear</b>.
 
 </div>
 
-
-</div>
-
 </section>
 
-<!-- CARRUSEL AUTORES -->
- </section>
 <section class="info-autores">
-
 <p>Da click y conócenos más</p>
-
 </section>
 
 <section class="carousel-container">
@@ -446,25 +435,11 @@ ahorrar tiempo y concentrarte en lo más importante: <b>crear</b>.
 
 <div class="carousel" id="carousel">
 
-<a href="Daniela.html">
-<img class="person" src="dani.png">
-</a>
-
-<a href="Neily.html">
-<img class="person" src="nei.png">
-</a>
-
-<a href="Ilia.html">
-<img class="person" src="ilia.png">
-</a>
-
-<a href="Diana.html">
-<img class="person" src="diana.png">
-</a>
-
-<a href="Mayra.html">
-<img class="person" src="may.png">
-</a>
+<a href="Daniela.html"><img class="person" src="dani.png"></a>
+<a href="Neily.html"><img class="person" src="nei.png"></a>
+<a href="Ilia.html"><img class="person" src="ilia.png"></a>
+<a href="Diana.html"><img class="person" src="diana.png"></a>
+<a href="Mayra.html"><img class="person" src="may.png"></a>
 
 </div>
 
@@ -513,25 +488,32 @@ ahorrar tiempo y concentrarte en lo más importante: <b>crear</b>.
 </div>
 
 </section>
+
 <footer>
-        <div class="footer-content">
-            <p>¡Te invitamos a visitar nuestras redes sociales!</p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/vorlagedesign?igsh=cmZmcmJmdGxpMnhp" target="_blank">
-                    <img src="i.png" alt="Instagram">
-                </a>
-                <a href="https://dribbble.com" target="_blank">
-                    <img src="b.png" alt="Dribbble">
-                </a>
-                <a href="https://www.pinterest.com" target="_blank">
-                    <img src="p.png" alt="Pinterest">
-                </a>
-            </div>
-        </div>
-    </footer>
+
+<div class="footer-content">
+
+<p>¡Te invitamos a visitar nuestras redes sociales!</p>
+
+<div class="social-icons">
+
+<a href="https://www.instagram.com/vorlagedesign?igsh=cmZmcmJmdGxpMnhp" target="_blank">
+<img src="i.png">
+</a>
+
+<a href="https://dribbble.com" target="_blank">
+<img src="b.png">
+</a>
+
+<a href="https://www.pinterest.com" target="_blank">
+<img src="p.png">
+</a>
+
+</div>
+
+</div>
+
+</footer>
 
 </body>
 </html>
-
-
-
